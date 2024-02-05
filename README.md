@@ -1,7 +1,7 @@
-# sptech_activities - primeira aula de algoritmos
+# primeira aula de algoritmos
 
 
-Lista 01 - Diagrama de Atividades
+Lista 01 - Diagramas
 
 
 1. Crie um diagrama de atividade que represente o seguinte programa:
