@@ -1,4 +1,4 @@
-# sptech_activities - primeira aula de algoritmos 05/02
+# sptech_activities - primeira aula de algoritmos
 
 
 Lista 01 - Diagrama de Atividades
