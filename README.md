@@ -6,6 +6,7 @@ Lista 01 -Diagrama de Atividades
 
 1. Crie um diagrama de atividade que represente o seguinte programa:
 
+
 a) O usuário informa 2 notas
 
 b) O programa calcula a média entre elas
@@ -16,6 +17,7 @@ c) O programa exibe a média
 
 2. Crie um diagrama de atividade que represente o seguinte programa:
 
+
 a) O usuário informa 2 notas
 
 b) O programa calcula a média entre elas
@@ -25,6 +27,7 @@ c) O programa exibe a "#partiuestágio" caso a média seja maior ou igual a 5 e 
 
 
 3. Crie um diagrama de atividade que represente o seguinte programa:
+
 
 a) O usuário informa seu sexo e sua idade
 
@@ -39,6 +42,7 @@ e) Caso seja mulher e idade a partir de 18 anos, exiba "Você é mulher maior de
 
 
 4. Crie um diagrama de atividade que represente o seguinte programa:
+
 
 a) Leia o estado brasileiro onde o usuário nasceu. Só aceite estados válidos, insistindo novamente até que seja informado um estado brasileiro
 
@@ -57,7 +61,8 @@ g) Caso a quantidade de filhos for mais de 3, exiba "#cresceiemultiplicaivos"
 
 
 5. Crie um diagrama de atividade que represente o seguinte programa:
-6. 
+
+
 a) O usuário informa quantas horas por noite dorme
 
 b) Caso ele durma de 0 a 4, exiba "#zumbi"
