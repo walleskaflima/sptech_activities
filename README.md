@@ -1,0 +1,1 @@
+# sptech_activities
