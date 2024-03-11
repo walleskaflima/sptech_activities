@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola</title>
+</head>
+<body>
+
+    Seu nome:
+    <input id="nome"><br><br>
+    
+    Sua idade:  
+    <input type="number" id="idade"><br><br>
+
+    <button onclick="Avaliacao()">
+        Avaliar Aluno
+    </button>
+
+    <br><br>
+
+    <div id="ExibirNaTela">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function    Avaliacao(){
+
+        var Nome = nome.value
+        var Idade = Number(idade.value)
+
+        if(Idade >= 18){
+            ExibirNaTela.innerHTML = (`${Nome} vamos tirar a CNH?`) 
+        }
+        else{
+            ExibirNaTela.innerHTML = (`${Nome} vai jogar Playstation`)
+        }
+    }
+
+</script>
+
+<!-- Criar um programa que auxilie uma Autoescola a identificar possíveis novos alunos. 
+
+a)Solicite o nome e a idade de uma pessoa; 
+b)Ao clicar no botão "Avaliar aluno", se a pessoa tiver 18 anos ou mais emita a mensagem "FULANO vamos tirar a CNH?", caso contrário emita a mensagem "FULANO vai jogar PlayStation!";  -->

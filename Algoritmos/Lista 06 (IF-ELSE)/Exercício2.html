@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco XPTO</title>
+</head>
+<body>
+
+    Saldo da sua conta:
+    <input type="number" id="saldo">
+    <br><br>
+
+    Valor do débito (valor que será retirado):
+    <input type="number" id="debito">
+    <br><br>
+
+    <button onclick="CalcularSaldo()">
+        Analisar Conta
+    </button>
+    <br><br>
+
+    <div id="ExibirSaldo">
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    function CalcularSaldo(){
+
+        var SaldoConta = Number(saldo.value)
+        var DebitoConta = Number(debito.value)
+        var SaldoFinal = SaldoConta - DebitoConta
+
+        if(SaldoFinal < 0){
+            ExibirSaldo.innerHTML = (`<b style="color:red;"> O saldo atual da conta corrente é R$${SaldoFinal}</b>`)
+        }
+        else{
+            ExibirSaldo.innerHTML = (`<i style="color:blue;"> O saldo atual da conta corrente é R$${SaldoFinal}</b>`)
+        }
+    }
+</script>
+
+
+
+<!-- Criar um programa que auxilie o Banco XPTO a identificar quem entrou no cheque especial. 
+a) Solicite o saldo da conta 
+b) Solicite o valor do débito (ou seja, valor a tirar da conta) 
+c) Ao clicar em "Analisar conta", calcule o novo saldo da conta e exiba a mensagem "o saldo atual da conta corrente é "XX". Esta frase deverá estar em negrito e em vermelho somente se o saldo for menor que zero ou em itálico e azul caso o saldo for 0 ou mais.  -->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Pessoais</title>
+</head>
+<body>
+
+    Cidade Natal:
+    <input id="cidade">
+    <br><br>
+
+    Ano de nascimento:
+    <input type="number" id="ano">
+    <br><br>
+
+    <button onclick="cadastrando()">
+        Cadastrar
+    </button>
+    
+</body>
+</html>
+
+<script>
+
+    function    cadastrando(){
+
+        var CidadeNatal = cidade.value
+        var AnoNascimento = Number(ano.value)
+
+        alert(`Você nasceu na cidade de ${CidadeNatal} em ${AnoNascimento}`)
+    }
+    
+</script>
+
+<!--a) Tenha o campo "Cidade Natal"  
+
+b) Tenha o campo "Ano de nascimento"  
+
+c) Tenha o botão "Cadastrar"  
+
+d) Ao clicar no botão, deve aparecer uma caixa de alerta com a frase:  
+
+   " Você nasceu na cidade de X em Y"  - Onde X é o valor do campo em a) e Y é o valor do campo em b)  -->

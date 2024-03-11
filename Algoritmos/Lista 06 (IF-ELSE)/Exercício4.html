@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequencia do Aluno</title>
+</head>
+<body>
+
+    Frequência do aluno:
+    <input type="number" id="frequencia">
+    <br><br>
+
+    <button onclick="Analise()">
+        Analisar Frequência
+    </button>
+
+    <div id="ExibirImagem">
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    function    Analise(){
+
+        var FrequenciaAluno = Number(frequencia.value)
+
+        if(FrequenciaAluno < 50){
+            ExibirImagem.innerHTML = (`<br><img src="https://media.licdn.com/dms/image/C4E12AQFFkZCxjWthtA/article-cover_image-shrink_600_2000/0/1566328846591?e=2147483647&v=beta&t=HzkBXLUPRcAPryKsu2Pn0qjwNF1YLJsA6uH0TGpdhqk">`)
+        }
+        else{
+            ExibirImagem.innerHTML = (`<br><img src="https://learningworksforkids.com/wp-content/uploads/image2-9-650x433.jpg">`)
+        }
+    }
+</script>
+
+<!-- Crie um programa o qual: 
+
+a) Solicita a frequência do aluno 
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele: 
+
+A imagem de um turista (https://media.licdn.com/dms/image/C4E12AQFFkZCxjWthtA/article-cover_image-shrink_600_2000/0/1566328846591?e=2147483647&v=beta&t=HzkBXLUPRcAPryKsu2Pn0qjwNF1YLJsA6uH0TGpdhqk), caso a frequência for menor que 50 OU 
+A imagem de um aluno estudioso (https://learningworksforkids.com/wp-content/uploads/image2-9-650x433.jpg), caso a frequência for a partir de 50  -->

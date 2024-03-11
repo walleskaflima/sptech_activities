@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Da Renda</title>
+</head>
+<body>
+
+    Valor do salário:
+    <input type="number" id="salario">
+    <br><br>
+    Valor do adicional mensal:
+    <input type="number" id="mensal">
+    <br><br>
+    Valor do bônus:
+    <input type="number" id="bonus">
+    <br><br>
+
+    <button onclick="CalculoRenda()">
+        Analisar Minha Renda
+    </button><br><br>
+
+    <div id="MensagemExibir">
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    function CalculoRenda() {
+
+        var Salario = Number(salario.value)
+        var AdicionalMensal = Number(mensal.value)
+        var BonusUsuario = Number(bonus.value)
+
+        var SalarioBruto = Salario + AdicionalMensal + BonusUsuario
+
+    if(SalarioBruto >= 10000){
+
+        var DescontoIR = SalarioBruto * 0.125 
+        var DescontoINSS = (SalarioBruto * 0.10) - (DescontoIR * 0.10)
+        var DescontoFGTS = (SalarioBruto * 0.08) - (DescontoIR * 0.08)
+        var SalarioLiquido = SalarioBruto - DescontoFGTS - DescontoINSS - DescontoIR
+    
+        MensagemExibir.innerHTML = (`
+        <b>ANÁLISE DA SUA RENDA:</b> 
+        <br><br> 
+
+        Com o salário de <b>R$${Salario}</b>, com adicional de <b>R$${AdicionalMensal}</b> e bônus de <b>R$${BonusUsuario}</b>, você tem: 
+        <br><br>
+
+        Bruto: <b>R$${SalarioBruto}</b><br>
+
+        IR: <b>R$${DescontoIR}</b><br> 
+        
+        INSS: <b>R$${DescontoINSS}</b><br> 
+        
+        FGTS: <b>R$${DescontoFGTS}</b><br> 
+        
+        Líquido: <b>R$${SalarioLiquido}</b>`)
+    }
+        else{
+            var DescontoIR = 0
+            var DescontoINSS = (SalarioBruto * 0.10) - (DescontoIR * 0.10)
+            var DescontoFGTS = (SalarioBruto * 0.08) - (DescontoIR * 0.08)
+            var SalarioLiquido = SalarioBruto - DescontoFGTS - DescontoINSS - DescontoIR
+    
+            MensagemExibir.innerHTML = (`
+            <b>ANÁLISE DA SUA RENDA:</b> 
+            <br><br> 
+
+            Com o salário de <b>R$${Salario}</b>, com adicional de <b>R$${AdicionalMensal}</b> e bônus de <b>R$${BonusUsuario}</b>, você tem: 
+            <br><br>
+
+            Bruto: <b>R$${SalarioBruto}</b>
+            <br>
+
+            IR: <b>R$${DescontoIR}</b>
+            <br>
+        
+            INSS: <b>R$${DescontoINSS}</b>
+            <br> 
+        
+            FGTS: <b>R$${DescontoFGTS}</b>
+            <br>
+        
+            Líquido: <b>R$${SalarioLiquido}</b>`)
+        }
+    
+        if(SalarioLiquido > 2500){
+
+        var NovoSalarioL = SalarioLiquido * 0.15
+        var LucroUmAno = NovoSalarioL * 12
+
+        MensagemExibir.innerHTML += (`<br><br>Com a renda de <b>R$${SalarioLiquido}</b>, é recomendado poupar <b>R$${NovoSalarioL}</b>, para que em um ano tenha poupado <b>R$${LucroUmAno}</b>`)
+        }
+        else {
+            MensagemExibir.innerHTML += (`<br><br>Com a renda de <b>R$${SalarioLiquido}</b>, é recomendado obter renda extra para realizar uma poupança.`)
+        }
+    }
+
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados sobre peso e altura</title>
+</head>
+<body>
+
+    Digite seu peso:
+    <input type="number" id="peso">
+    <br><br>
+
+    Digite a sua altura:
+    <input type="number" id="altura">
+    <br><br>
+
+    <button onclick="Informacoes()">
+        Fale Comigo
+    </button>
+    
+</body>
+</html>
+
+<script>
+
+	function    Informacoes(){
+
+		var Peso = Number(peso.value)
+		var Altura = Number(altura.value)
+
+		alert(`Você pesa ${Peso} e tem ${Altura} de altura`)
+}
+
+</script>
+
+<!--Crie uma página que solicite ao usuário que digite seu peso e altura.  
+
+a) Deve haver um botão com o texto "Fale comigo".  
+
+b) Ao clicar no botão, deve aparecer uma frase como esta numa caixinha de alerta:  
+
+     "Você pesa X e tem Y de altura" - Onde X e Y são os valores que o usuário digitou, claro -->

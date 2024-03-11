@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas do Aluno</title>
+</head>
+<body>
+    
+    Primeira nota do aluno:
+    <input  type="number" id="primeira">
+    <br><br>
+
+    Segunda nota do aluno:
+    <input  type="number" id="segunda">
+    <br><br>
+
+    <button onclick="CalculoMedia()">
+        Verificar situação
+    </button>
+
+    <div id="ExibirMedia">
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    function    CalculoMedia(){
+
+        var PrimeiraNota = Number(primeira.value)
+        var SegundaNota = Number(segunda.value)
+        var MediaFinal = (PrimeiraNota + SegundaNota) / 2
+
+        if(MediaFinal >= 6){
+            ExibirMedia.innerHTML = (`<br> Parabéns, aprovado!`)
+        }
+        else{
+            ExibirMedia.innerHTML = (`<br> Tente outra vez...`)
+        }
+    }
+</script>
+
+<!--Crie um programa o qual: 
+
+a) Solicite 2 notas de um aluno 
+
+b) Ao clicar em "Verificar situação", calcule sua média e... 
+
+c) Caso a média seja a partir de 6, exiba "Parabéns, aprovado!" 
+
+d) Caso a média seja menor que 6, exiba "Tente outra vez..."  -->
+
+ 
